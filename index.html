@@ -16,9 +16,13 @@
 
     <div class="main" id="mainContainer" hidden>
       <img id="profileImage" height="100" width="100" />
+
       <h2 id="fullName"></h2>
+
       <p id="bio"></p>
+
       <h5 id="followersInformation"></h5>
+
       <p>Check me on <a id="githubLink">Github</a></p>
       <a
         class="twitter-timeline"
@@ -42,8 +46,7 @@
           console.log(data);
 
           let followersCount = data["followers"];
-          let followersInfo =
-            "I have been followed by ${followersCount} awesome people on Github";
+          let followersInfo = `I have been followed by ${followersCount} awesome people on Github`;
           document.getElementById("profileImage").src = data["avatar_url"];
           document.getElementById("fullName").textContent = data["name"];
           document.getElementById("bio").textContent = data["bio"];
